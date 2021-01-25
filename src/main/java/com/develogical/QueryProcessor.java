@@ -11,6 +11,9 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("piazza")){
             return "Well done you found the secret code";
         }
+        else if (query.toLowerCase().contains("charles")){
+            return "Wow you found the super secret code !!";
+        }
         return "";
     }
 }
