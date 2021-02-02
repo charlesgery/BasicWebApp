@@ -18,6 +18,17 @@ public class QueryProcessor {
                 return Integer.toString(Integer.parseInt(tokens[2])+Integer.parseInt(tokens[4]));
             }
         }
+        else if (query.toLowerCase().contains("which of the following numbers is the largest")){
+            String[] tokens = query.split(" ");
+            
+            int max = Integer.parseInt(tokens[8]);
+            for (int i = 8; i < tokens.length; i++){
+                if (Integer.parseInt(tokens[i]) > max)
+                    max = Integer.parseInt(tokens[i]);
+            }
+            
+            return Integer.toString(max);
+        }
         return "";
     }
 }

@@ -34,5 +34,10 @@ public class QueryProcessorTest {
     public void addition() throws Exception {
         assertThat(queryProcessor.process("what is 2 plus 2"), containsString("4"));
     }
+
+    @Test
+    public void findMax() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is the largest 2018 2019"), containsString("2019"));
+    }
 }
 
