@@ -44,5 +44,10 @@ public class QueryProcessorTest {
     public void findMaxComma() throws Exception {
         assertThat(queryProcessor.process("which of the following numbers is the largest 2018, 2019"), containsString("2019"));
     }
+
+    @Test
+    public void mult() throws Exception {
+        assertThat(queryProcessor.process("what is 2 mutiplied by 2"), containsString("4"));
+    }
 }
 

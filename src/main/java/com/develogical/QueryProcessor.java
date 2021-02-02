@@ -19,9 +19,11 @@ public class QueryProcessor {
             if (!tokens[0].equals("what"))
                 tokens = Arrays.copyOfRange(tokens, 1, tokens.length);
 
-            System.out.println(tokens);
             if (query.toLowerCase().contains("plus")){
                 return Integer.toString(Integer.parseInt(tokens[2])+Integer.parseInt(tokens[4]));
+            }
+            if (query.toLowerCase().contains("mutiplied by")){
+                return Integer.toString(Integer.parseInt(tokens[2])*Integer.parseInt(tokens[5]));
             }
         }
         else if (query.toLowerCase().contains("which of the following numbers is the largest")){
