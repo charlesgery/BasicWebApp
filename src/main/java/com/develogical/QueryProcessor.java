@@ -13,7 +13,17 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("your name")){
             return "Piazza";
         }
+        else if (query.toLowerCase().contains("what is")){
+            String[] tokens = query.split(" ");
 
+            if (tokens[0] != "what")
+                tokens = Arrays.copyOfRange(tokens, 1, tokens.length);
+
+            System.out.println(tokens);
+            if (query.toLowerCase().contains("plus")){
+                return Integer.toString(Integer.parseInt(tokens[1])+Integer.parseInt(tokens[3]));
+            }
+        }
         else if (query.toLowerCase().contains("which of the following numbers is the largest")){
             String[] tokens = query.split(" ");
 
