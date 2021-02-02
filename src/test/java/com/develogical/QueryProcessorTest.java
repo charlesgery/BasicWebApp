@@ -39,5 +39,10 @@ public class QueryProcessorTest {
     public void findMax() throws Exception {
         assertThat(queryProcessor.process("which of the following numbers is the largest 2018 2019"), containsString("2019"));
     }
+
+    @Test
+    public void findMaxComma() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is the largest 2018, 2019"), containsString("2019"));
+    }
 }
 
