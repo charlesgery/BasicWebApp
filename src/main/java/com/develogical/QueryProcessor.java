@@ -11,6 +11,13 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("your name")){
             return "Piazza";
         }
+        else if (query.toLowerCase().contains("what is")){
+            String[] tokens = query.split(" ");
+
+            if (query.toLowerCase().contains("plus")){
+                return Integer.toString(Integer.parseInt(tokens[2])+Integer.parseInt(tokens[4]));
+            }
+        }
         return "";
     }
 }

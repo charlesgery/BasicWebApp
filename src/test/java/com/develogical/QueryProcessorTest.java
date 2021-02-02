@@ -29,4 +29,10 @@ public class QueryProcessorTest {
     public void teamName() throws Exception {
         assertThat(queryProcessor.process("what is your name"), containsString("Piazza"));
     }
+
+    @Test
+    public void addition() throws Exception {
+        assertThat(queryProcessor.process("what is 2 plus 2"), containsString("4"));
+    }
 }
+
