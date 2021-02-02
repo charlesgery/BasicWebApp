@@ -46,34 +46,10 @@ public class QueryProcessor {
             
             return Integer.toString(max);
         }
-        else if (query.toLowerCase().contains("which of the following numbers is both a square and a cube")){
-            String[] tokens = query.split(" ");
 
-            if (!tokens[0].equals("which"))
-                tokens = Arrays.copyOfRange(tokens, 1, tokens.length);
-            
-            int max = Integer.parseInt(tokens[8].replace(",", ""));
-            for (int i = 8; i < tokens.length; i++){
-                if (Integer.parseInt(tokens[i].replace(",", "")) > max)
-                    max = Integer.parseInt(tokens[i].replace(",", ""));
-            }
-            
-            return Integer.toString(max);
-        }
+
         return "";
     }
 
-    static boolean checkPerfectSquareCube(double x)  
-    { 
 
-	// finding the square root of given number 
-	double sq = Math.sqrt(x); 
-
-	/* Math.floor() returns closest integer value, for
-	 * example Math.floor of 984.1 is 984, so if the value
-	 * of sq is non integer than the below expression would
-	 * be non-zero.
-	 */
-	return ((sq - Math.floor(sq)) == 0); 
-    } 
 }
