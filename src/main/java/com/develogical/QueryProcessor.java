@@ -31,6 +31,9 @@ public class QueryProcessor {
             if (query.toLowerCase().contains("mutiplied by")){
                 return Integer.toString(Integer.parseInt(tokens[2])*Integer.parseInt(tokens[5]));
             }
+            if (query.toLowerCase().contains("to the power of")){
+                return Double.toString(Math.pow(Integer.parseInt(tokens[2]),Integer.parseInt(tokens[7])));
+            }
         }
         else if (query.toLowerCase().contains("which of the following numbers is the largest")){
             String[] tokens = query.split(" ");
@@ -46,7 +49,7 @@ public class QueryProcessor {
             
             return Integer.toString(max);
         }
-
+        
 
         return "";
     }
