@@ -56,5 +56,10 @@ public class QueryProcessorTest {
     public void pow() throws Exception {
         assertThat(queryProcessor.process("what is 2 to the power of 2"), containsString("4"));
     }
+
+    @Test
+    public void minus() throws Exception {
+        assertThat(queryProcessor.process("what is 2 minus 2"), containsString("0"));
+    }
 }
 
