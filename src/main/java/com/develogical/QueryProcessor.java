@@ -15,14 +15,14 @@ public class QueryProcessor {
             String[] tokens = query.split(" ");
 
             if (query.toLowerCase().contains("plus")){
-                return Integer.toString(Integer.parseInt(tokens[2])+Integer.parseInt(tokens[4]));
+                return Integer.toString(Integer.parseInt(tokens[3])+Integer.parseInt(tokens[5]));
             }
         }
         else if (query.toLowerCase().contains("which of the following numbers is the largest")){
             String[] tokens = query.split(" ");
             
-            int max = Integer.parseInt(tokens[8]);
-            for (int i = 8; i < tokens.length; i++){
+            int max = Integer.parseInt(tokens[9]);
+            for (int i = 9; i < tokens.length; i++){
                 if (Integer.parseInt(tokens[i]) > max)
                     max = Integer.parseInt(tokens[i]);
             }
